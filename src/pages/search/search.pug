@@ -1,0 +1,73 @@
+extends ../../layout/layout
+
+block variables
+    - var title = 'Нюрнберг. Эпилог великой битвы'
+    - var keywords = 'Нюрнберг. Эпилог великой битвы'
+    - var description = 'Нюрнберг. Эпилог великой битвы'
+
+
+block main
+    section
+        .search-page__search-bar
+            .container
+                .search-field
+                    input(placeholder="Поиск...")
+                    img(src="/images/search.svg")
+                .search-page__search-description
+                    p По запросу <strong>«Германия»</strong> найдено 35 совпадений
+                    .spacer
+                    .menu-block
+                        strong Сортировать:
+                        .menu-list__container
+                            button.menu-list__trigger
+                                p по релевантности
+                                img(src="/images/arrow.svg" alt="Сортировать")
+                            .menu-list
+                                ul
+                                    li
+                                        a по релевантности
+                                    li
+                                        a по популярности
+                                    li
+                                        a по важности
+                                    li
+                                        a по веселости
+        .container
+            .page-content.search-page__page-content
+                .content
+
+                    .tabs-panel
+                        a
+                            p Все разделы
+                            span 35
+                        a.active
+                            p Новости
+                            span 15
+                        a
+                            p Цитаты
+                            span 25
+                        a
+                            p Видео
+                            span 3
+                        a
+                            p Фото
+                            span 13
+
+                    .search-page__no-results
+                        p К сожалению, на ваш поисковой запрос ничего не найдено.
+
+                    .posts-list
+                        include ../../components/post-card_wide/post-card_wide
+                        +post-card_wide("Title 1", "Lorem ipsum dolor sit amet, <span class='search-request'>Поисковой запрос</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-1.png")
+                        +post-card_wide("Title 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span class='search-request'>Поисковой запрос</span> aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-2.png")
+                        +post-card_wide("Title 3", "<span class='search-request'>Поисковой запрос</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-3.png")
+                        +post-card_wide("Title 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class='search-request'>Поисковой запрос</span> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class='search-request'>Поисковой запрос</span> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class='search-request'>Поисковой запрос</span> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+                        +post-card_wide("Title 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <span class='search-request'>Поисковой запрос</span> ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-1.png")
+                        +post-card_wide("Title 6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex <span class='search-request'>Поисковой запрос</span> ea commodo consequat", "/images/post-2.png")
+                        +post-card_wide("Title 7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <span class='search-request'>Поисковой запрос</span> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-3.png")
+                        +post-card_wide("Title 8", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <span class='search-request'>Поисковой запрос</span> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+
+                    .search-page__buttons
+                        button Загрузить еще
+
+

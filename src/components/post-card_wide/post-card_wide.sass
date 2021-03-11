@@ -1,0 +1,60 @@
+@import "../../assets/styles/variables"
+
+
+.post-card_wide
+  display: flex
+  margin-bottom: 40px
+  border: none
+  cursor: pointer
+  @media(max-width: $bp-md)
+    flex-wrap: wrap
+  @media (max-width: $bp-sm)
+    &:last-child
+      margin-bottom: 0
+
+  .post-card__image
+    max-width: 253px
+    margin-right: 34px
+    flex-shrink: 0
+    @media(max-width: $bp-md)
+      max-width: 100%
+      margin-bottom: 16px
+    @media(max-width: $bp-sm)
+      margin-bottom: 12px
+
+  .post-card__content
+    .post-card__chips
+      margin-bottom: 12px
+      line-height: 1
+      @media(max-width: $bp-sm)
+        margin-bottom: 10px
+
+    p.date
+      font-size: 14px
+      line-height: 18px
+      color: $text-color-hint
+      display: inline-block
+      margin: 0
+
+    h3
+      font-family: $font-family-secondary
+      font-style: normal
+      font-weight: 500
+      font-size: 20px
+      line-height: 22px
+      color: $text-color-primary
+      @media(max-width: $bp-sm)
+        font-size: 18px
+        line-height: 21px
+
+    .post-card__description
+      margin-top: 8px
+      color: $text-color-secondary
+      .search-request
+        font-weight: 600
+        color: $color-primary
+      @media(max-width: $bp-sm)
+        font-size: 14px
+        line-height: 24px
+
+

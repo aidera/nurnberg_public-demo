@@ -1,0 +1,114 @@
+@import "../../assets/styles/variables"
+
+#sidebar, .sidebar-imitator
+  width: 256px
+  margin-left: 29px
+  flex-shrink: 0
+  user-select: none
+  @media (max-width: $bp-lg)
+    width: 100%
+    margin-left: 0
+    margin-top: 48px
+
+  .search-field
+    position: relative
+    margin-bottom: 18px
+    @media (max-width: $bp-lg)
+      display: none
+    input
+      background-color: #F5F5F5
+      border: 1px solid #F5F5F5
+      padding: 7px 8px 7px 38px
+      border-radius: 4px
+      width: 100%
+      font-family: $font-family-secondary
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      transition: 0.25s
+      &::placeholder
+        color: #A1AAB1
+        font-weight: 400
+        font-family: $font-family-secondary
+      &:focus, &:active
+        background-color: white
+        border-color: $text-color-hint-secondary
+    img
+      top: 50%
+      left: 8px
+      transform: translateY(-50%)
+      width: 20px
+      height: 20px
+      position: absolute
+
+    &:hover
+      input
+        border-color: $text-color-hint-secondary
+
+  .sidebar-theme-block
+    margin-bottom: 8px
+    padding-left: 42px
+    @media (max-width: $bp-lg)
+      padding-left: 0
+      margin-top: 0
+      margin-bottom: 18px
+
+
+    h5
+      margin: 0
+      color: $text-color-primary
+      font-family: $font-family-secondary
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      text-transform: uppercase
+
+
+    .sidebar-theme-block__links
+      margin-top: 12px
+      display: flex
+      flex-direction: column
+      @media (max-width: $bp-lg)
+        flex-direction: row
+        flex-wrap: wrap
+      div
+        margin-bottom: 4px
+        margin-right: 24px
+        @media (max-width: $bp-lg)
+          margin-bottom: 4px
+      a
+        color: $text-color-primary
+        font-size: 16px
+        line-height: 20px
+        display: inline-block
+
+        &:last-child
+          margin-bottom: 0
+        &:hover
+          border-color: $text-color-primary
+
+    .buttons
+      margin-top: 12px
+      @media (max-width: $bp-lg)
+        margin-top: 6px
+
+  .divider-decorated
+    @media (max-width: $bp-lg)
+      margin-top: 0
+      margin-bottom: 12px
+
+  .sidebar-adv
+    background-color: #373737
+    height: 170px
+    width: 100%
+    margin-top: 31px
+    display: flex
+    justify-content: center
+    align-content: center
+    align-items: center
+    color: white
+    cursor: pointer
+    @media (max-width: $bp-lg)
+      display: none

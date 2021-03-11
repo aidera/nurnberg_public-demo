@@ -1,0 +1,45 @@
+extends ../../layout/layout
+
+block variables
+    - var title = 'Нюрнберг. Эпилог великой битвы'
+    - var keywords = 'Нюрнберг. Эпилог великой битвы'
+    - var description = 'Нюрнберг. Эпилог великой битвы'
+
+
+block main
+    section
+        .container
+            .page-content_with-sidebar
+                .content
+                    .posts-list
+                        include ../../components/post-card/post-card
+                        +post-card("Title 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mona_Lisa-restored.jpg")
+                        +post-card("Title 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-2.png")
+                        +post-card("Title 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-3.png")
+                        +post-card("Title 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+                        .video-in-posts-list.video-with-margin
+                            iframe(src="https://www.youtube.com/embed/qw_xMmD5DQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        +post-card("Title 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-1.png")
+                        +post-card("Title 6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat.", "/images/post-2.png")
+                        +post-card("Title 7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-3.png")
+                        +post-card("Title 8", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+                    .index-page__buttons
+                        a.link-with-icon
+                            p Посмотреть все новости
+                            img(src="/images/next.svg" alt="Посмотреть все новости")
+
+                    .pagination
+                        a.prev
+                            img(src="/images/next.svg" alt="Предыдущая страница")
+                            p Предыдущая страница
+                        div.current-page 1 из 20
+                        a.next
+                            p Следующая страница
+                            img(src="/images/next.svg" alt="Следующая страница")
+
+
+                include ../../components/sidebar/sidebar
+
+
+    include ../../components/with-the-help/with-the-help
+

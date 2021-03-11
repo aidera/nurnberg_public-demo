@@ -1,0 +1,10 @@
+mixin post-card_wide(title, description, img, tag)
+    .post-card_wide
+        .post-card__image
+            img(src=`${img}`)
+        div.post-card__content
+            div.post-card__chips
+                a.chip Факты
+                p.date 08.01.2019
+            h3= title
+            div.post-card__description !{description}

@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables"
+
+section.other-posts
+  background-color: #FAFBFB
+  padding: 56px 0 31px 0
+  @media (max-width: $bp-md)
+    padding-top: 32px
+
+
+  .page-content_with-sidebar
+    margin: 0
+
+
+  ul
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 32px
+    margin: 0
+    align-items: flex-start
+    user-select: none
+    list-style-type: none
+    @media (max-width: $bp-lg)
+      grid-template-columns: 1fr 1fr
+    @media (max-width: $bp-sm)
+      grid-template-columns: 1fr
+      grid-gap: 42px
+
+    li
+      list-style: none
+      margin: 0
+      .other-posts-card
+        border: none
+        display: block
+        text-align: left
+        cursor: pointer
+
+        .other-posts-card__image
+          max-width: 100%
+
+
+        .other-posts-card__content
+          margin-top: 4px
+          color: $text-color-primary
+          .other-posts-card__date
+            font-size: 14px
+            line-height: 24px
+            color: $text-color-hint
+            @media(max-width: $bp-sm)
+              font-size: 12px
+              margin-bottom: 4px
+
+          h3
+            font-family: Ubuntu
+            font-style: normal
+            font-weight: 500
+            font-size: 20px
+            line-height: 22px
+            margin-top: 10px
+            color: $text-color-primary
+            @media(max-width: $bp-sm)
+              font-size: 18px
+              line-height: 21px
+
+
+          .other-posts-card__description
+            color: $text-color-secondary
+            margin-top: 8px
+
+        .other-posts-card__link
+          margin-top: 18px
+
+

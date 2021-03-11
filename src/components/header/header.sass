@@ -1,0 +1,188 @@
+@import "../../assets/styles/variables"
+
+header#header
+  @media(max-width: $bp-md)
+    margin-top: 52px
+
+  .banner
+    min-height: 196px
+    background-image: url("/images/header-banner-2.png")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    display: flex
+    flex-direction: column
+    user-select: none
+    @media (max-width: $bp-md)
+      min-height: 211px
+    .banner__overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(173.38deg, #000000 -15.15%, rgba(179, 179, 179, 0) 94.8%)
+      opacity: 0.8
+    .banner__headers
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 21px 0 56px 0
+      position: relative
+      @media (max-width: $bp-md)
+        padding: 80px 0
+      > div
+        display: flex
+        flex-direction: column
+        align-content: flex-start
+        align-items: flex-start
+
+      a
+        border: none
+        display: flex
+        flex-direction: column
+
+      img
+        max-width: 100%
+        margin-left: -5px
+
+      span
+        font-weight: 700
+        font-size: 64px
+        color: white
+        line-height: 64px
+        text-transform: uppercase
+        text-shadow: 0 2px 10px #000000
+        margin-left: -3px
+        @media(max-width: 380px)
+          font-size: 54px
+      strong
+        font-size: 24px
+        color: white
+        line-height: 35px
+        text-shadow: 0 2px 10px #000000
+        font-weight: 700
+        text-transform: uppercase
+        @media(max-width: $bp-xs)
+          font-size: 24px
+
+
+    .banner__nav
+      position: relative
+      background-color: rgba(0, 0, 0, 0.5)
+      @media (max-width: $bp-md)
+        display: none
+      > div
+        display: flex
+        justify-content: space-between
+        align-items: center
+        align-content: center
+
+
+      ul
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        margin: 0
+        li
+          display: block
+          flex-shrink: 0
+          position: relative
+          margin: 0
+          margin-right: 20px
+          list-style: none
+          a
+            padding: 14px 0
+            display: inline-block
+            color: white
+            text-transform: uppercase
+            font-family: $font-family-secondary
+            font-weight: 500
+            font-size: 14px
+            line-height: 18px
+            transition: $transition-1
+            border: none
+
+            @media(max-width: 1200px)
+              font-size: 14px
+              padding: 14px 0
+              padding-right: 14px
+            @media(max-width: $bp-lg)
+              font-size: 14px
+            @media(max-width: $bp-md)
+              padding: 20px
+
+            &:hover
+              color: $color-primary
+
+          .decor
+            height: 4.25px
+            width: calc(100% + 10px)
+            left: 0
+            bottom: 8px
+            position: absolute
+            background-position: center right
+            background-repeat: no-repeat
+            background-size: cover
+            background-image: url("/images/link-decoration.svg")
+            display: none
+            @media(max-width: 1200px)
+              width: 100%
+              height: 2.5px
+              bottom: 8px
+          &.active
+            .decor
+              display: block
+
+      .banner__nav__social-link
+        border: none
+        svg
+          *
+            transition: 0.25s
+        &:hover
+          svg
+            fill: $color-primary
+            color: $color-primary
+            *
+              fill: $color-primary
+              color: $color-primary
+
+
+      .search-field
+        position: relative
+        width: 250px
+        flex-shrink: 0
+        @media (max-width: $bp-md)
+          display: none
+        input
+          background-color: #F5F5F5
+          border: 1px solid #F5F5F5
+          padding: 7px 8px 7px 38px
+          border-radius: 4px
+          width: 100%
+          font-family: $font-family-secondary
+          font-style: normal
+          font-weight: normal
+          font-size: 16px
+          line-height: 22px
+          transition: 0.25s
+          &::placeholder
+            color: #A1AAB1
+            font-weight: 400
+            font-family: $font-family-secondary
+          &:focus, &:active
+            background-color: white
+            border-color: $text-color-hint-secondary
+        img
+          top: 50%
+          left: 8px
+          transform: translateY(-50%)
+          width: 20px
+          height: 20px
+          position: absolute
+
+        &:hover
+          input
+            border-color: $text-color-hint-secondary

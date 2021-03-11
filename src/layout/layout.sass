@@ -1,0 +1,673 @@
+@import ../assets/styles/general
+
+
+*
+  font-family: 'Source Sans Pro', sans-serif
+  scroll-behavior: smooth
+  color: $text-color-primary
+
+*:not(a)
+  color: $text-color-secondary
+
+body
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.5
+  @media(max-width: $bp-md)
+    font-size: 14px
+
+main
+  overflow-x: hidden
+
+strong, b
+  font-weight: 600
+
+em, i
+  font-style: italic
+
+
+p
+  margin-bottom: 24px
+  color: $text-color-secondary
+  
+a
+  color: $link-color-primary
+  transition: .25s
+  border-bottom: 1px solid transparent
+  cursor: pointer
+  &:hover
+    border-color: $link-color-primary
+
+
+.container
+  width: 1150px
+  margin: 0 auto
+  @media(max-width: $bp-xl)
+    width: 950px
+
+  @media(max-width: $bp-lg)
+    width: 750px
+
+  @media(max-width: $bp-md)
+    width: 100%
+    padding: 0 5vw
+
+
+.page-content
+  margin-top: 40px
+  margin-bottom: 68px
+  @media (max-width: $bp-lg)
+    margin-top: 25px
+    margin-bottom: 48px
+  .content
+    flex-grow: 1
+
+.page-content_with-sidebar
+  display: flex
+  margin-top: 40px
+  margin-bottom: 68px
+  @media (max-width: $bp-lg)
+    flex-direction: column
+    margin-top: 25px
+    margin-bottom: 48px
+  .content
+    flex-grow: 1
+
+
+
+
+
+
+
+
+ul
+  list-style-type: disc
+  margin-bottom: 24px
+  max-width: 100%
+  li
+    display: list-item
+    list-style: disc outside
+    margin-left: 36px
+    margin-bottom: 16px
+    max-width: 100%
+    color: $text-color-secondary
+
+ol
+  list-style-type: decimal
+  margin-bottom: 24px
+  max-width: 100%
+  li
+    display: list-item
+    list-style: decimal outside
+    margin-left: 36px
+    margin-bottom: 16px
+    max-width: 100%
+    color: $text-color-secondary
+
+figure
+  max-width: 100%
+  margin: 0 auto
+  margin-bottom: 24px
+
+figcaption
+  color: $text-color-hint
+  font-size: 14px
+  line-height: 24px
+  margin-top: 8px
+
+img
+  max-width: 100%
+  margin: 0 auto
+
+
+.video-in-posts-list
+  width: 100%
+  margin-bottom: 40px
+  iframe
+    width: 100%
+    height: 384px
+    @media (max-width: $bp-sm)
+      height: 220px
+    @media (max-width: $bp-xs)
+      height: 180px
+
+.video
+  width: 100%
+  iframe
+    width: 100%
+    height: 442px
+    @media (max-width: $bp-lg)
+      height: 400px
+    @media (max-width: $bp-sm)
+      height: 220px
+    @media (max-width: $bp-xs)
+      height: 180px
+
+
+
+
+h2, h3, h4, h5
+  font-size: 18px
+  margin-bottom: 10px
+  color: $text-color-primary
+
+h1
+  font-family: $font-family-secondary
+  font-style: normal
+  font-weight: 500
+  font-size: 25px
+  line-height: 28px
+  @media (max-width: $bp-md)
+    font-size: 18px
+    line-height: 24px
+
+h2
+  font-family: $font-family-secondary
+  font-style: normal
+  font-weight: normal
+  font-size: 22px
+  line-height: 26px
+  @media (max-width: $bp-md)
+    font-size: 16px
+    line-height: 1.4
+    font-weight: 500
+
+
+.link-with-icon
+  display: inline-flex
+  align-items: center
+  align-content: center
+  color: $link-color-primary
+  cursor: pointer
+  *
+    color: $link-color-primary
+  p
+    margin: 0
+  img
+    margin-left: 16px
+
+
+.spacer
+  flex-grow: 1
+
+
+
+.breadcrumbps
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 26px
+  user-select: none
+  @media(max-width: $bp-md)
+    margin-top: 21px
+  *
+    margin: 0
+    margin-right: 4px
+    border-color: transparent
+    color: $text-color-hint
+    font-size: 18px
+    @media(max-width: $bp-md)
+      font-size: 14px
+    &:last-child
+      margin-right: 0
+  a
+    &:hover
+      border-color: $text-color-hint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divider
+  margin: 24px 0
+  opacity: 0.21
+  height: 1px
+  background-color: #FFFFFF
+
+.divider-grey
+  margin: 24px 0
+  height: 1px
+  background-color: $divider-color-2
+
+
+img.divider-decorated
+  width: 100%
+  margin: 12px 0
+
+
+
+
+.chip
+  background-color: $color-primary
+  color: white
+  text-transform: uppercase
+  padding: 0px 4px
+  font-family: $font-family-secondary
+  font-style: normal
+  font-weight: 300
+  font-size: 14px
+  line-height: 16px
+  margin-right: 15px
+  cursor: pointer
+  display: inline-block
+
+
+
+.quote
+  display: flex
+  margin-bottom: 32px
+  margin-top: 43px
+  .quote-img
+    flex-shrink: 0
+    background-image: url("/images/quotes2.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    width: 38px
+    height: 50px
+    margin-right: 53px
+    margin-top: 8px
+    @media(max-width: $bp-sm)
+      margin-right: 24px
+  .quote-container
+    flex-grow: 1
+    .quote-content
+      font-size: 18px
+      line-height: 29px
+      color: $text-color-secondary
+      margin-bottom: 24px
+    .quote-name
+      font-weight: 700
+      font-size: 16px
+      line-height: 24px
+      color: $text-color-secondary
+    .quote-position
+      font-size: 14px
+      line-height: 24px
+      color: $text-color-hint
+
+
+
+.menu-block
+  display: flex
+  align-content: center
+  align-items: center
+  user-select: none
+
+  @media(max-width: $bp-sm)
+    width: 100%
+    margin-top: 8px
+
+  strong
+    font-family: $font-family-secondary
+    color: $text-color-hint-secondary
+    font-weight: 400
+    letter-spacing: -0.41px
+    @media(max-width: $bp-md)
+      font-size: 14px
+
+  .menu-list__container
+    position: relative
+
+  .menu-list__trigger
+    display: flex
+    align-content: center
+    align-items: center
+    border: none
+    outline: none
+    cursor: pointer
+    padding-left: 12px
+
+    p
+      font-weight: 500
+      font-family: $font-family-secondary
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: -0.41px
+      margin: 0
+      @media(max-width: $bp-md)
+        font-size: 14px
+        line-height: 20px
+
+    img
+      margin-left: 4px
+      margin-bottom: -2px
+
+  .menu-list
+    position: absolute
+    right: 0
+    bottom: 0
+    transform: translateY(100%)
+    z-index: 10
+    display: none
+    opacity: 0
+    transition: 0.25s
+    width: 200px
+    &.active
+      display: block
+      opacity: 1
+    ul
+      background-color: white
+      margin: 0
+      margin-top: 10px
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3)
+      list-style-type: none
+      li
+        margin: 0
+        list-style: none
+      a
+        display: block
+        border: none
+        padding: 8px 16px
+        color: $text-color-primary
+        &:hover
+          color: $color-primary
+
+
+
+
+
+
+
+
+
+
+
+/* SLIDER */
+
+.tns-outer
+  padding: 0 !important // remove padding: clientWidth = width + padding (0) = width
+  [hidden]
+    display: none !important
+  [aria-controls], [data-action]
+    cursor: pointer
+
+.tns-slider
+  -webkit-transition: all 0s
+  -moz-transition: all 0s
+  transition: all 0s
+  > .tns-item
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+.tns-horizontal
+  &.tns-subpixel
+    white-space: nowrap
+    > .tns-item
+      display: inline-block
+      vertical-align: top
+      white-space: normal
+
+  &.tns-no-subpixel
+    &:after
+      content: ''
+      display: table
+      clear: both
+
+    > .tns-item
+      float: left
+
+  &.tns-carousel
+    &.tns-no-subpixel
+      > .tns-item
+        margin-right: -100%
+
+.tns-no-calc
+  position: relative
+  left: 0
+
+.tns-gallery
+  position: relative
+  left: 0
+  min-height: 1px // make sure slider container is visible
+  // overflow: hidden;
+  > .tns-item
+    position: absolute
+    left: -100%
+    -webkit-transition: transform 0s, opacity 0s
+    -moz-transition: transform 0s, opacity 0s
+    transition: transform 0s, opacity 0s
+
+  > .tns-slide-active
+    position: relative
+    left: auto !important
+
+  > .tns-moving
+    -webkit-transition: all 0.25s
+    -moz-transition: all 0.25s
+    transition: all 0.25s
+
+.tns-autowidth
+  display: inline-block
+.tns-lazy-img
+  -webkit-transition: opacity 0.6s
+  -moz-transition: opacity 0.6s
+  transition: opacity 0.6s
+  opacity: 0.6
+  &.tns-complete
+    opacity: 1
+
+.tns-ah
+  -webkit-transition: height 0s
+  -moz-transition: height 0s
+  transition: height 0s
+
+.tns-ovh
+  overflow: hidden
+.tns-visually-hidden
+  position: absolute
+  left: -10000em
+.tns-transparent
+  opacity: 0
+  visibility: hidden
+
+.tns-fadeIn
+  opacity: 1
+  filter: alpha(opacity=100)
+  z-index: 0
+
+.tns-normal, .tns-fadeOut
+  opacity: 0
+  filter: alpha(opacity=0)
+  z-index: -1
+
+
+
+// *** Fix a viewport issue in initialization
+.tns-vpfix
+  white-space: nowrap
+  > div, > li
+    display: inline-block
+
+
+// *** Detecting browser capability ***
+$width: 310px
+$height: 10px
+$count: 70
+$perpage: 3
+
+.tns-t
+  &-subp2
+    margin: 0 auto
+    width: $width
+    position: relative
+    height: $height
+    overflow: hidden
+
+  &-ct
+    width: (100% * $count / $perpage)
+    width: -webkit-calc(100% * #{$count} / #{$perpage})
+    width: -moz-calc(100% * #{$count} / #{$perpage})
+    width: calc(100% * #{$count} / #{$perpage})
+    position: absolute
+    right: 0
+    &:after
+      content: ''
+      display: table
+      clear: both
+    > div
+      width: (100% / $count)
+      width: -webkit-calc(100% / #{$count})
+      width: -moz-calc(100% / #{$count})
+      width: calc(100% / #{$count})
+      height: $height
+      float: left
+
+.tns-outer
+  position: relative
+  button[data-action="stop"]
+    display: none
+  button[data-action="start"]
+    display: none
+
+.tns-controls
+  user-select: none
+  button
+    padding: 0
+    margin: 0
+    outline: none
+    border: none
+    position: absolute
+    top: 50%
+    margin-top: -20px
+    z-index: 10
+
+  button[data-controls="prev"]
+    left: 24px
+    @media (max-width: $bp-sm)
+      left: 12px
+  button[data-controls="next"]
+    right: 24px
+    @media (max-width: $bp-sm)
+      right: 12px
+
+.tns-liveregion
+  display: none
+
+
+.tns-nav
+  display: none
+
+
+.slider
+  margin-bottom: 16px
+  .slide-container
+    user-select: none
+    .slide
+      height: 442px
+      @media (max-width: $bp-sm)
+        height: 220px
+      @media (max-width: $bp-xs)
+        height: 180px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+  .slider-caption
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    padding: 16px 0
+    *
+      color: $text-color-hint
+      font-size: 14px
+      line-height: 24px
+    p
+      flex-grow: 1
+      margin: 0 !important
+
+    .slider-caption__slides
+      flex-shrink: 0
+      display: flex
+      user-select: none
+      font-weight: 600
+
+
+
+
+.pagination
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  margin-right: -8px
+  padding-top: 15px;
+  @media (max-width: $bp-md)
+    justify-content: center
+    margin-right: 0
+
+  > *
+    margin: 0 8px
+    margin-top: 10px
+  a
+    display: inline-flex
+    align-items: center
+    align-content: center
+    color: $link-color-primary
+    cursor: pointer
+    *
+      color: $link-color-primary
+    p
+      margin: 0
+
+
+    &.prev
+      img
+        margin-right: 16px
+        transform: rotate(180deg)
+      @media (max-width: $bp-md)
+        margin-left: -32px
+    &.next
+      img
+        margin-left: 16px
+      @media (max-width: $bp-md)
+        margin-right: -32px
+
+  .current-page
+    flex-shrink: 0
+    white-space: nowrap
+    text-align: center
+    @media (max-width: $bp-md)
+      width: 100%
+
+
+
+
+
+
+
+
+@import ../components/header/header
+@import ../components/header-quote/header-quote
+@import ../components/header-mobile/header-mobile
+@import ../components/footer/footer
+@import ../components/sidebar/sidebar
+@import ../components/post-card/post-card
+@import ../components/post-card_wide/post-card_wide
+@import ../components/with-the-help/with-the-help
+@import ../components/other-posts/other-posts
+
+@import ../pages/index/index
+@import ../pages/category/category
+@import ../pages/search/search
+@import ../pages/post/post
+@import ../pages/sitemap/sitemap
+
+
+
+
+
+

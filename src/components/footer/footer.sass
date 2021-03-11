@@ -1,0 +1,185 @@
+@import "../../assets/styles/variables"
+
+.footer-mobile-adv
+  background-color: #373737
+  height: 170px
+  width: 100%
+  display: none
+  justify-content: center
+  align-content: center
+  align-items: center
+  color: white
+  cursor: pointer
+  @media(max-width: $bp-lg)
+    display: flex
+
+
+
+footer
+  background-image: url("/images/footer-background.png")
+  background-size: cover
+  background-color: #212121
+  background-position: center center
+  background-repeat: no-repeat
+  padding-top: 24px
+  padding-bottom: 16px
+  position: relative
+
+  *
+    color: white
+
+
+
+  .footer__nav
+    display: grid
+    grid-template-columns: 2fr 3fr 1fr
+    grid-gap: 16px
+    padding-bottom: 10px
+    user-select: none
+    @media (max-width: $bp-lg)
+      grid-template-columns: 2fr 1fr
+    @media (max-width: $bp-sm)
+      grid-template-columns: 1fr
+
+
+    .footer__main-info
+      @media (max-width: $bp-lg)
+        grid-column-start: 1
+        grid-column-end: 3
+
+      @media (max-width: $bp-sm)
+        grid-column-start: 1
+        grid-column-end: 2
+        margin-bottom: 24px
+
+      .logo
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        border: none
+        max-width: 200px
+
+        img
+          max-width: 100%
+
+        span
+          font-weight: 700
+          font-size: 32px
+          color: white
+          line-height: 32px
+          text-transform: uppercase
+          margin-left: -2px
+
+        strong
+          font-size: 16px
+          line-height: 16px
+          text-transform: uppercase
+          font-weight: 700
+          margin-top: 8px
+
+      .socials
+        margin-top: 20px
+        a
+          margin-right: 15px
+          border: none
+          font-size: 13px
+          line-height: 1.2
+          &:hover
+            opacity: 0.8
+          &:last-child
+            margin-right: 0
+
+
+    .footer__main-links
+      display: flex
+      @media (max-width: $bp-sm)
+        flex-wrap: wrap
+      .footer__main-links-block
+        display: flex
+        flex-direction: column
+        width: 50%
+        padding-right: 8px
+        @media (max-width: $bp-xs)
+          width: 100%
+          &:first-child
+            margin-bottom: 23px
+        a
+          color: white
+          text-transform: uppercase
+          margin-bottom: 10px
+          border: none
+          font-family: $font-family-secondary
+          font-style: normal
+          font-weight: normal
+          font-size: 14px
+          line-height: 18px
+          &:hover
+            border: none
+            opacity: 0.8
+          &:last-child
+            margin-bottom: 0
+
+
+    .footer__secondary-links
+      display: flex
+      justify-content: flex-end
+      padding-right: 44px
+      @media (max-width: $bp-sm)
+        justify-content: flex-start
+        margin-top: 24px
+      .footer__secondary-links-block
+        display: flex
+        flex-direction: column
+        @media (max-width: $bp-sm)
+          flex-direction: row
+          flex-wrap: wrap
+      a
+        color: white
+        margin-bottom: 10px
+        border: none
+        font-family: $font-family-secondary
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        opacity: 0.7
+        @media (max-width: $bp-sm)
+          margin-bottom: 12px
+          margin-right: 24px
+        &:hover
+          border: none
+          opacity: 1
+        &:last-child
+          margin-bottom: 0
+
+
+  .divider
+    margin: 8px 0
+
+
+  .footer__legal-info
+    strong
+      text-transform: uppercase
+      margin-bottom: 8px
+      font-family: $font-family-secondary
+      font-weight: 500
+      font-size: 13px
+      line-height: 1.4
+      display: block
+    p
+      opacity: 0.7
+      font-family: $font-family-secondary
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 18px
+      margin: 0
+
+      a
+        border-color: white
+        color: white
+      b
+        font-weight: bold
+        color: $color-primary
+        font-size: 14px

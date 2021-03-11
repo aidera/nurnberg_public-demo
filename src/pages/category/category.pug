@@ -1,0 +1,59 @@
+extends ../../layout/layout
+
+block variables
+    - var title = 'Нюрнберг. Эпилог великой битвы'
+    - var keywords = 'Нюрнберг. Эпилог великой битвы'
+    - var description = 'Нюрнберг. Эпилог великой битвы'
+
+
+block main
+    section
+        .container
+            .page-content_with-sidebar
+                .content
+                    .breadcrumbps
+                        a(href='/') Главная
+                        span /
+                        a(href='/') Темы
+                        span /
+                        p Биография
+                    .category-page__heading
+                        h1 Биография
+                        .spacer
+                        .menu-block
+                            strong Сортировать:
+                            .menu-list__container
+                                button.menu-list__trigger
+                                    p по релевантности
+                                    img(src="/images/arrow.svg" alt="Сортировать")
+                                .menu-list
+                                    ul
+                                        li
+                                            a по релевантности
+                                        li
+                                            a по популярности
+                                        li
+                                            a по важности
+                                        li
+                                            a по веселости
+
+
+                    .posts-list
+                        include ../../components/post-card/post-card
+                        +post-card("Title 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-1.png")
+                        +post-card("Title 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-2.png")
+                        +post-card("Title 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat.", "/images/post-3.png")
+                        +post-card("Title 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+                        +post-card("Title 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-1.png")
+                        +post-card("Title 6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-2.png")
+                        +post-card("Title 7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-3.png")
+                        +post-card("Title 8", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aliquip ex ea commodo consequat", "/images/post-4.png")
+                    .category-page__buttons
+                        a.link-with-icon
+                            p Посмотреть все новости
+                            img(src="/images/next.svg" alt="Посмотреть все новости")
+
+
+                include ../../components/sidebar/sidebar
+
+

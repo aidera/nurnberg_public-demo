@@ -1,0 +1,111 @@
+@import "../../assets/styles/variables"
+
+
+
+
+.search-page__search-bar
+  background-color: #ECEEEF
+  padding: 24px 0
+
+  p
+    margin: 0
+
+  .search-field
+    position: relative
+    margin-bottom: 24px
+    input
+      background-color: white
+      border: 1px solid $text-color-hint-secondary
+      border-radius: 4px
+      padding: 13px
+      padding-left: 40px
+      width: 100%
+      font-family: $font-family-secondary
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      &::placeholder
+        color: #A1AAB1
+        font-weight: 400
+        font-family: $font-family-secondary
+    img
+      position: absolute
+      left: 10px
+      top: 50%
+      transform: translateY(-50%)
+
+
+  .search-page__search-description
+    display: flex
+    @media (max-width: $bp-md)
+      flex-wrap: wrap
+      >p
+        width: 100%
+        margin: 0
+        color: $text-color-primary
+      .menu-block
+        margin-top: 8px
+
+
+.search-page__page-content
+  margin-top: 24px
+
+  .tabs-panel
+    display: flex
+    border-bottom: 1px solid $text-color-hint-secondary
+    margin-bottom: 48px
+    user-select: none
+    @media(max-width: $bp-md)
+      display: block
+
+    a
+      border: none
+      outline: none
+      display: inline-block
+      font-weight: 600
+      font-family: $font-family-secondary
+      margin-right: 48px
+      padding-bottom: 20px
+      border-bottom: 4px solid transparent
+      margin-bottom: -1px
+      @media(max-width: $bp-md)
+        padding: 0
+        margin-right: 0
+        border-width: 1px
+        display: table
+        margin-bottom: 20px
+      p
+        margin: 0
+        margin-right: 6px
+        display: inline-block
+        color: $text-color-primary
+      span
+        color: $text-color-hint-secondary
+        display: inline-block
+      &.active
+        border-color: $color-primary
+        p
+          color: $color-primary
+
+  .search-page__no-results
+    text-align: center
+    p
+      color: $text-color-hint-secondary
+      font-family: $font-family-secondary
+      font-size: 20px
+      line-height: 22px
+      font-weight: 400
+      margin: 0
+
+  .search-page__buttons
+    text-align: center
+    margin-top: 56px
+    user-select: none
+    button, a
+      padding: 12px 20px
+      color: $color-primary
+      border: 1px solid $text-color-hint-secondary
+      outline: none
+      font-size: 16px
+      cursor: pointer

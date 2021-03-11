@@ -1,0 +1,63 @@
+@import "../../assets/styles/variables"
+
+#header-quote
+  @media(max-width: $bp-md)
+    margin-top: 52px
+
+  .quote
+    position: relative
+    padding: 10px 0
+    margin: 0
+
+    > *
+      position: relative
+
+    .quote__img
+      width: 60px
+      height: 50px
+      background-image: url("/images/quotes.svg")
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      right: 150px
+      top: -20px
+      @media (max-width: $bp-md)
+        right: -20px
+
+
+
+    .quote__content
+      position: relative
+      width: 100%
+      display: flex
+      align-content: flex-end
+      @media (max-width: $bp-md)
+        max-width: 100%
+        flex-wrap: wrap
+
+      strong
+        font-style: italic
+        font-size: 12px
+        line-height: 16px
+        font-weight: 700
+        display: inline
+
+      p
+        font-size: 12px
+        line-height: 16px
+        display: inline
+        margin: 0
+        margin-left: 8px
+        flex-shrink: 0
+        vertical-align: bottom
+        align-self: flex-end
+        justify-self: flex-end
+
+        @media (max-width: $bp-md)
+          margin-left: 0
+          margin-top: 4px
+
+
+
+

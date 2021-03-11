@@ -1,0 +1,85 @@
+@import "../../assets/styles/variables"
+
+
+
+.post-page__pre-info
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 8px
+  align-items: flex-start
+  align-content: flex-start
+  *
+    line-height: 1.2
+  .post-page__pre-info-text
+    color: $text-color-hint
+    @media(max-width: $bp-md)
+      width: 100%
+      margin-top: 10px
+    p
+      color: $text-color-hint
+      margin: 0
+
+
+
+.post-page__heading-image
+  margin-top: 16px
+  max-width: 100%
+
+.post-page__content
+  max-width: 100%
+  margin-top: 16px
+  margin-bottom: 40px
+  @media(max-width: $bp-md)
+    margin-top: 8px
+    line-height: 1.7
+
+
+.post-page__last-info
+  p
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 8px
+    color: $text-color-hint
+
+
+.social-buttons
+  display: flex
+  align-content: center
+  align-items: center
+  margin-top: 30px
+  @media(max-width: $bp-md)
+    flex-wrap: wrap
+  > div
+    flex-shrink: 0
+    @media(max-width: $bp-md)
+      width: 100%
+    &:first-child
+      margin-right: 16px
+      @media(max-width: $bp-md)
+        margin-bottom: 10px
+
+.sharethis-inline-share-buttons
+  user-select: none
+  z-index: 1 !important
+  max-width: 350px
+  width: 100%
+  .st-btn
+    background-color: $bg-color-secondary !important
+
+
+.likes
+  user-select: none
+  display: flex
+  align-content: center
+  align-items: center
+  > *
+    margin-right: 16px
+
+  .fb-like
+    height: 21px !important
+
+
+
+
+#mc-container
+  margin-top: 40px
